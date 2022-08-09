@@ -1,86 +1,54 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>The Generics</title>
-        <meta name="description" content="This is a description">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header class="main-header">
-            <nav class="nav main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="store.html">Store</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </nav>
-            <h1 class="band-name band-name-large">The Generics</h1>
-            <div class="container">
-                <button class="btn btn-header" type="button">
-                    Get Our Latest Album
-                </button>
-            </div>
-            <button class="btn btn-header btn-play">&#9658</button>
-        </header>
-        <section class="content-section container">
-            <h2 class="section-header">Tours</h2>
-            <div>
-                <div class="tour-row">
-                    <span class="tour-item tour-date">JUL 16</span>
-                    <span class="tour-item tour-city">DETROIT, MI</span>                   
-                    <span class="tour-item tour-arena">DTE ENERGY MUSIC THEATRE</span>
-                    <button class="btn tour-item tour-btn btn-primary">BUY TICKETS</button>
-                </div>
-                <div class="tour-row">
-                    <span class="tour-item tour-date">JUL 19</span>
-                    <span class="tour-item tour-city">TORONTO, ON</span>                   
-                    <span class="tour-item tour-arena">BUDWEISER STAGE</span>
-                    <button class="btn tour-item tour-btn btn-primary">BUY TICKETS</button>
-                </div>
-                <div class="tour-row">
-                    <span class="tour-item tour-date">JUL 22</span>
-                    <span class="tour-item tour-city">BRISTOW, VA</span>                   
-                    <span class="tour-item tour-arena">JIGGY LUBE LIVE</span>
-                    <button class="btn tour-item tour-btn btn-primary">BUY TICKETS</button>
-                </div>
-                <div class="tour-row">
-                    <span class="tour-item tour-date">JUL 29</span>
-                    <span class="tour-item tour-city">PHOENIX, AZ</span>
-                    <span class="tour-item tour-arena">AK-CHIN PAVILION</span>
-                    <button class="btn tour-item tour-btn btn-primary">BUY TICKETS</button>
-                </div>
-                <div class="tour-row">
-                    <span class="tour-item tour-date">AUG 2</span>
-                    <span class="tour-item tour-city">LAS VEGAS, NV</span>
-                    <span class="tour-item tour-arena">T-MOBILE ARENA</span>
-                    <button class="btn tour-item tour-btn btn-primary">BUY TICKETS</button>
-                </div>
-                <div class="tour-row">
-                    <span class="tour-item tour-date">AUG 9</span>
-                    <span class="tour-item tour-city">CONCORD, CA</span>                   
-                    <span class="tour-item tour-arena">CONCORD PAVILION</span>
-                    <button class="btn tour-item tour-btn btn-primary">BUY TICKETS</button>
-                </div>
-            </div>
-        </section>
-        <footer class="main-footer">
-            <div class="container main-footer-container">
-                <h3 class="band-name">The Generics</h3>
-                <ul class="nav footer-nav">
-                    <li>
-                        <a href="https://www.youtube.com/" target="_blank"><img src="Images/YouTube Logo.png">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.spotify.com/" target="_blank"><img src="Images/Spotify Logo.png">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/" target="_blank"><img src="Images/Facebook Logo.png">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-    </body>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Project</title>
+		<link rel="stylesheet" href="styles.css">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>Login</h1>
+			</div>
+			<div class="login">
+				<form action="about.html">
+					<div>
+						<label for="username" class="label-username">Username</label>
+						<div class="username-container">
+							👤
+							<input type="text" name="username" class = "username" placeholder="Enter your username.">
+						</div>
+					</div>
+					<div>
+						<label for="password" class="label-password">Password</label>
+						<div class="password-container">
+							🔒
+							<input type="password" name="password" class = "password" placeholder="Enter your password" class="password">
+						</div>
+					</div>
+					<div class="optional">
+						<div class="checkbox">
+							<input type="checkbox" name="remember">
+							<label for="remember">Remember Me</label>
+						</div>
+						<div class="forgot-password">
+							<a href="https://www.google.com/">forgot password</a>
+						</div>
+					</div>
+					<div class="submit-div">
+						<button type="submit" name="button" onclick="submit()">Submit</button>
+					</div>
+					<div class="alternative">
+						<span class="signup">Or Signup Using</span>
+						<div class="icons">
+							<a href="https://accounts.google.com/login" target="_blank"><img src="Images/icons8-google-color-32.png" alt="login google"></a>
+							<a href="https://facebook.com/login" target="_blank"><img src="Images/icons8-facebook-32.png" alt="login facebook"></a>
+							<a href="https://linkedin.com/login" target="_blank"><img src="Images/icons8-linkedin-circled-32.png" alt="login linkedin"></a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
 </html>
