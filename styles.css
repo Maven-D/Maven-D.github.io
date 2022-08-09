@@ -1,338 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 
-@font-face {
-    font-family: "Booter - Zero Zero";
-    src: url("Fonts/Booter\ -\ Zero\ Zero.woff") format("woff"),
-         url("Fonts/Booter\ -\ Zero\ Zero.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-}
 
-* {
-    box-sizing: border-box;
-    font-family: Raleway;
-    color: #777;;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
-html, body {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-}
-
-.nav ul {
-    margin: 0;
-}
-
-.nav li {
-    display: inline;
-}
-
-.nav a {
-    display: inline-block;
-    padding: .5em;
+::placeholder {
     color: white;
-    text-decoration: none;
+    opacity: 0.7;
 }
 
-.nav a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+:-ms-input-placeholder {
+    color: white;
+    opacity: 0.7;
 }
 
-.main-nav {
-    text-align: center;
-    font-size: 1.1em;
-    font-weight: lighter;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+::-ms-input-placeholder {
+    color: white;
+    opacity: 0.7;
 }
 
-.main-nav li {
-    padding: 0 5%;
-}
-
-.main-header {
-    background-image: url("Images/Header\ Background.jpg");
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-image: url("Images/login-background.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.6);
-    background-blend-mode: multiply;
-    padding-bottom: 30px;
-}
-
-.band-name {
-    text-align: center;
-    margin: 0;
-    font-size: 4em;
-    font-family: "Booter - Zero Zero";
-    font-weight: normal;
-    color: white;
-}
-
-.band-name-large {
-    font-size: 8em;
-}
-
-.content-section {
-    margin: 1em;
+    
 }
 
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 1.5em;
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    border: 2px solid black;
 }
 
-.section-header {
-    font-family: "Metal Mania";
-    font-weight: normal;
-    color: #333;
-    text-align: center;
-    font-size: 2.5em;
-}
 
-.about-band-image {
-    float: left;
-    height: 200px;
-    width: 200px;
-    margin: 15px;
-    border-radius: 50%;
-}
 
-.main-footer {
-    background-color: #56ccf2;
-    color: white;
-    padding: .25em 0;
-}
-
-.main-footer-container {
+.header {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    font-family: 'Bungee Shade', cursive;
 }
 
-.main-footer-container ul {
-    flex-grow: 1;
-    text-align: end;
+
+.login > * {
+    margin-bottom: 10px;
+    width: fit-content;
 }
 
-.footer-nav li {
-    padding: 0 .5em;
+.submit-div {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    padding-left: 40%;
 }
 
-.footer-nav img {
-    width: 30px;
-    height: 30px;
+.label-username, .label-password {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10%;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-.btn {
-    text-align: center;
-    vertical-align: middle;
-    padding: .67em .67em;
+.username, .password{
+    width: 400px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    
+    height: 25px;
+    /* margin-left: 10%; */
+    margin-bottom: 10px;
+}
+
+button {
+    border-radius: 5px;
+    width: 100px;
+    background-color: #3ace30de;
+    border: 1px solid white;
     cursor: pointer;
 }
 
-.btn-header {
-    margin: .5em 15% 2em 15%;
-    color: white;
-    border: 2px solid #2d9cdb;
-    background-color: rgba(255, 255, 255, .1);
-    border-radius: 0;
-    font-size: 1.5em;
-    font-weight: lighter;
-    padding-left: 2em;
-    padding-right: 2em;
+button:hover {
+    background-color: rgba(239, 56, 56, 0.749);
 }
 
-.btn-header:hover {
-    background-color: rgba(255, 255, 255, .3);
-}
 
-.btn-play {
-    display: block;
-    margin: 0 auto;
-    color: #2d9cdb;
-    font-size: 4em;
-    border-radius: 50%;
-    padding: 0;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-}
-
-.tour-row {
-    border-bottom: 1px solid black;
-    padding-bottom: 1em;
-    margin-bottom: 1em;
-}
-
-.tour-row:last-child {
-    border-bottom: none;
-}
-
-.tour-item {
-    display: inline-block;
-    padding-right: .5em;
-}
-
-.tour-date {
-    color: #555;
-    font-weight: bold;
-    width: 11%;
-}
-
-.tour-city {
-    width: 24%;
-}
-
-.tour-arena {
-    width: 42%;
-}
-
-.tour-btn {
-    max-width: 19%;
-}
-
-.btn-primary {
-    color: white;
-    background-color: #56ccf2;
-    border: none;
-    border-radius: .3em;
-    font-weight: bold;
-}
-
-.btn-primary:hover {
-    background-color: #2d9cdb;
-}
-
-.shop-item {
-    margin: 30px;
-}
-
-.shop-item-title {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.shop-item-image {
-    height: 250px;
-}
-
-.shop-item-details {
-    display: flex;
-    align-items: center;
-    padding: 5px;
-}
-
-.shop-item-price {
-    flex-grow: 1;
-    color: #333;
-}
-
-.shop-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.cart-header {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #333;
-}
-
-.cart-column {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid black;
-    margin-right: 1.5em;
-    padding-bottom: 10px;
-    margin-top: 10px;
-}
-
-.cart-row {
-    display: flex;
-}
-
-.cart-item {
-    width: 45%;
-}
- 
-.cart-price {
-    width: 20%;
-}
-
-.cart-quantity {
-    width: 35%;
-}
-
-.cart-item-title {
-    color: #333;
-    margin-left: .5em;
-    font-size: 1.2em;
-}
-
-.cart-item-image {
-    width: 75px;
-    height: auto;
-    border-radius: 10px;
-}
-
-.btn-danger {
-    color: white;
-    background-color: #eb5757;
-    border: none;
-    border-radius: .3em;
-}
-
-.btn-danger:hover {
-    background-color: #cc4c4c;
-}
-
-.cart-quantity-input {
-    height: 34px;
-    width: 50px;
-    border-radius: 5px;
-    border: 1px solid #56ccf2;
-    background-color: #eee;
-    color: #333;
-    padding: 0;
-    text-align: center;
-    font-size: 1.2em;
-    margin-right: 25px;
-}
-
-.cart-row:last-child {
-    border-bottom: 1px solid black;
-}
-
-.cart-row:last-child .cart-column {
-    border: none;
-}
-
-.cart-total {
-    text-align: end;
-    margin-top: 10px;
-    margin-right: 40px;
-}
-
-.cart-total-title {
-    font-weight: bold;
-    font-size: 1.5em;
+.forgot-password > * {
     color: black;
-    margin-right: 20px;
+    font-weight: bold;
+    text-decoration: none;
+
 }
 
-.cart-total-price {
-    color: #333;
-    font-size: 1.1em;
+.optional {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 35%;
 }
 
-.btn-purchase {
-    display: block;
-    margin: 40px auto 80px auto;
-    font-size: 1.75em;
+
+.checkbox {
+    display: flex;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.password-container, .username-container {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid black;
+    margin-left: 10%;
+}
+
+.alternative {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.signup {
+    color: black;
+    padding: 2px;
+    border-radius: 8px;
+    z-index: 1;
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+.icons {
+    border-top: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    gap: 10px;
+    transform: translateY(-20%);
+    
 }
