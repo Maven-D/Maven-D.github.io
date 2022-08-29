@@ -1,6 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 ::placeholder {
     color: white;
     opacity: 0.7;
@@ -16,14 +22,13 @@
     opacity: 0.7;
 }
 
-body {
+.background {
     align-items: center;
     display: flex;
     justify-content: center;
-    background-image: url("Images/login-background.jpg");
-    background-repeat: no-repeat;
+    height: 100vh;
+    background: url("./Images/login-background.jpg");
     background-size: cover;
-
 }
 
 .container {
@@ -147,3 +152,4 @@ button:hover {
     padding-top: 30px;
     gap: 10px;
     transform: translateY(-20%);
+}
