@@ -1,3 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Imprima&family=Tienne:wght@700&display=swap");
+* {
+  font-family: "Imprima";
+}
+
+body::-webkit-scrollbar {
+  width: 13px;
+  height: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #311e10;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #eabe7c;
+  border-radius: 4px;
+  border: 2px solid #f6f7ed;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #d9dd92;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
