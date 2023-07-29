@@ -13,7 +13,7 @@ function Card(props) {
   }
 
   function goRight() {
-    if (index == images.length - 3) return;
+    if (index == images.length - 1) return;
     setIndex((index) => index + 1);
   }
   return (
@@ -24,15 +24,12 @@ function Card(props) {
           className="hover:cursor-pointer"
           onClick={goLeft}
         />
-        <div className="w-11/12 max-h-60 grid grid-cols-3 overflow-hidden gap-2">
-          <div>
-            <img src={images[index]} className="rounded-md h-full"></img>
-          </div>
-          <div>
-            <img src={images[index + 1]} className="rounded-md h-full"></img>
-          </div>
-          <div>
-            <img src={images[index + 2]} className="rounded-md h-full"></img>
+        <div className="w-11/12 h-60  gap-2 flex overflow-hidden items-center">
+          <div className="flex justify-center w-full">
+            <img
+              src={images[index]}
+              className="object-scale-down max-h-60  rounded-md h-fit"
+            ></img>
           </div>
         </div>
         <AiOutlineRight
@@ -42,15 +39,12 @@ function Card(props) {
         />
       </div>
       <h5 className=" mt-2 text-2xl font-tienne text-center underline">
-        Project Title
+        {props.title}
       </h5>
-      <p className="mt-2">
-        about the project aljdfkh ;ahdlkjhkjh lorenalhdflkkn lorem alkdhglkjh20
-        akkhdskjhj
-      </p>
-      <div className="flex gap-4 mt-4 justify-center">
+      <p className="mt-2">{props.desc}</p>
+      <div className="flex gap-2 mt-4 justify-center md:gap-4">
         {techStack.map((tech) => (
-          <div className="bg-vanilla rounded-lg p-2">{tech}</div>
+          <div className="bg-vanilla rounded-lg p-1 md:p-2">{tech}</div>
         ))}
       </div>
     </div>

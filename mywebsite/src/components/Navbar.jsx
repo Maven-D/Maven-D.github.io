@@ -31,7 +31,7 @@ function Navbar({ isMobile }) {
       <div
         id="menu"
         className={
-          isMobile && " grid grid-rows-[0fr] transition-all duration-700"
+          isMobile ? " grid grid-rows-[0fr] transition-all duration-700" : ""
         }
       >
         <ul
