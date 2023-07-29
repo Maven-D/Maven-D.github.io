@@ -35,18 +35,21 @@ function Contact() {
   // };
   function submitFeedback(e) {
     e.preventDefault();
-    const API_KEY = import.meta.env.VITE_API_KEY;
+
     const feedback = new FormData(document.getElementById("feedbackForm"));
-    fetch(API_KEY, {
+
+    fetch("/api", {
       method: "POST",
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
       body: feedback,
-    }).then((res) => {
-      console.log(res.status);
-      console.log(res.statusText);
-    });
+    })
+      .then((res) => {
+        res.json().then(({ result }) => console.log(result));
+      })
+      .catch((e) => {});
+
     console.log("hello");
   }
   return (
