@@ -35,13 +35,15 @@ function Contact() {
   // };
   function submitFeedback(e) {
     e.preventDefault();
+    const API_KEY = import.meta.env.VITE_API_KEY;
 
     const feedback = new FormData(document.getElementById("feedbackForm"));
 
-    fetch("/api", {
+    fetch(API_KEY, {
       method: "POST",
       headers: {
         "Access-Control-Allow-Origin": "*",
+        Allow: "GET, POST",
       },
       body: feedback,
     })
