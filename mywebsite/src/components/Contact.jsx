@@ -41,12 +41,8 @@ function Contact() {
 
     fetch(API_KEY, {
       method: "POST",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        Allow: "GET, POST",
-        "Content-Type": "text/plain;charset=utf-8",
-      },
-      body: feedback,
+      data: feedback,
+      mode: "cors",
     })
       .then((res) => {
         res.json().then(({ result }) => console.log(result));
