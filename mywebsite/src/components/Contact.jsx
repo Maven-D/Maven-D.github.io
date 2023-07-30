@@ -44,6 +44,7 @@ function Contact() {
       headers: {
         "Access-Control-Allow-Origin": "*",
         Allow: "GET, POST",
+        "Content-Type": "text/plain;charset=utf-8",
       },
       body: feedback,
     })
