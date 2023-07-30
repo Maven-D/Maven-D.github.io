@@ -37,12 +37,21 @@ function Contact() {
     e.preventDefault();
     const API_KEY = import.meta.env.VITE_API_KEY;
 
-    const feedback = new FormData(document.getElementById("feedbackForm"));
+    const feedback = {
+      FirstName: document.getElementById("FirstName").value,
+      LastName: document.getElementById("LastName").value,
+      Email: document.getElementById("Email").value,
+      Phone: document.getElementById("Phone").value,
+      Description: document.getElementById("Description").value,
+    };
 
     fetch(API_KEY, {
       method: "POST",
-      data: feedback,
+      body: JSON.stringify(feedback),
       mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
     })
       .then((res) => {
         res.json().then(({ result }) => console.log(result));
@@ -69,6 +78,7 @@ function Contact() {
               type="text"
               placeholder="First Name"
               name="FirstName"
+              id="FirstName"
               className="pl-3 rounded-md"
               required
             />
@@ -76,6 +86,7 @@ function Contact() {
               type="text"
               placeholder="Last Name"
               name="LastName"
+              id="LastName"
               className="pl-3 rounded-md"
               required
             />
@@ -84,6 +95,7 @@ function Contact() {
             type="email"
             placeholder="Email"
             name="Email"
+            id="Email"
             className="pl-3 border-2 rounded-md h-10"
             required
           />
@@ -91,6 +103,7 @@ function Contact() {
             type="phone"
             placeholder="Phone"
             name="Phone"
+            id="Phone"
             className="pl-3 border-2 rounded-md h-10"
             required
           />
@@ -98,6 +111,7 @@ function Contact() {
             type="text"
             placeholder="Feedback (max 1000 characters)"
             name="Description"
+            id="Description"
             maxLength={1000}
             rows={8}
             className="pl-3 border-2 rounded-md resize-none"
