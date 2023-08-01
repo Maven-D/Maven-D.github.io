@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
 // import { GoogleSpreadsheet } from "google-spreadsheet";
 // import { JWT } from "google-auth-library";
 
@@ -33,6 +34,9 @@ function Contact() {
   //     console.log("Error", e);
   //   }
   // };
+
+  const [showModal, setShowModal] = useState(false);
+
   function submitFeedback(e) {
     e.preventDefault();
     const API_KEY = import.meta.env.VITE_API_KEY;
@@ -54,78 +58,93 @@ function Contact() {
       },
     })
       .then((res) => {
-        res.json().then(({ result }) => console.log(result));
+        res.json().then(({ result }) => setShowModal(true));
       })
       .catch((e) => {});
-
-    console.log("hello");
   }
   return (
-    <section>
-      <h2 className="font-bungee text-4xl text-bistre font-bold mt-16">
-        Contact Details
-      </h2>
+    <>
+      <section>
+        <h2 className="font-bungee text-4xl text-bistre font-bold mt-16">
+          Contact Details
+        </h2>
 
-      <div>
-        <form
-          className="flex flex-col [&>*]:mt-3"
-          id="feedbackForm"
-          method="post"
-          onSubmit={submitFeedback}
-        >
-          <div className="grid grid-cols-2 gap-3 [&>*]:border-2 h-10">
+        <div>
+          <form
+            className="flex flex-col [&>*]:mt-3"
+            id="feedbackForm"
+            method="post"
+            onSubmit={submitFeedback}
+          >
+            <div className="grid grid-cols-2 gap-3 [&>*]:border-2 h-10">
+              <input
+                type="text"
+                placeholder="First Name"
+                name="FirstName"
+                id="FirstName"
+                className="pl-3 rounded-md"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                name="LastName"
+                id="LastName"
+                className="pl-3 rounded-md"
+                required
+              />
+            </div>
             <input
-              type="text"
-              placeholder="First Name"
-              name="FirstName"
-              id="FirstName"
-              className="pl-3 rounded-md"
+              type="email"
+              placeholder="Email"
+              name="Email"
+              id="Email"
+              className="pl-3 border-2 rounded-md h-10"
               required
             />
             <input
-              type="text"
-              placeholder="Last Name"
-              name="LastName"
-              id="LastName"
-              className="pl-3 rounded-md"
+              type="phone"
+              placeholder="Phone"
+              name="Phone"
+              id="Phone"
+              className="pl-3 border-2 rounded-md h-10"
               required
             />
+            <textarea
+              type="text"
+              placeholder="Feedback (max 1000 characters)"
+              name="Description"
+              id="Description"
+              maxLength={1000}
+              rows={8}
+              className="pl-3 border-2 rounded-md resize-none"
+              required
+            />
+
+            <input
+              type="submit"
+              placeholder="Submit"
+              className="rounded-md border-2 bg-flame text-white hover:bg-slate-300 hover:cursor-pointer self-center w-64 h-10"
+            />
+          </form>
+        </div>
+      </section>
+      {showModal && (
+        <div className="fixed top-0 left-0 h-full w-full z-10 bg-slate-500 opacity-80 flex justify-center items-center">
+          <div className="relative h-1/3 w-1/3 bg-white flex items-center justify-center">
+            <AiOutlineClose
+              className="absolute top-2 right-2 cursor-pointer"
+              size={20}
+              color="red"
+              onClick={() => setShowModal(false)}
+            />
+            <h3 className="text-xl uppercase">
+              Feedback Successfully Sumbitted
+            </h3>
           </div>
-          <input
-            type="email"
-            placeholder="Email"
-            name="Email"
-            id="Email"
-            className="pl-3 border-2 rounded-md h-10"
-            required
-          />
-          <input
-            type="phone"
-            placeholder="Phone"
-            name="Phone"
-            id="Phone"
-            className="pl-3 border-2 rounded-md h-10"
-            required
-          />
-          <textarea
-            type="text"
-            placeholder="Feedback (max 1000 characters)"
-            name="Description"
-            id="Description"
-            maxLength={1000}
-            rows={8}
-            className="pl-3 border-2 rounded-md resize-none"
-            required
-          />
-
-          <input
-            type="submit"
-            placeholder="Submit"
-            className="rounded-md border-2 bg-flame text-white hover:bg-slate-300 hover:cursor-pointer self-center w-64 h-10"
-          />
-        </form>
-      </div>
-    </section>
+        </div>
+      )}
+    </>
   );
 }
 
