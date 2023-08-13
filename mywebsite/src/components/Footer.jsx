@@ -13,9 +13,9 @@ function Footer() {
 
       <div className="flex gap-3 bg-vanilla rounded-md p-2">
         <div className="flex-1 border-r-2 border-bistre align-middle">
-          some random desciption about me that no one cares about even more
-          content than is neccesary and so much more;oaiosdkljhshlkjg
-          akdkjfhflkjadshlkfjhlfghj
+          I am currently a student in Indian Institute of Technology Patna
+          pursuing Bachelor of Technology in Computer Science and Engineering.
+          You can connect with me on the Github, LinkedIn, and contact details.
         </div>
         <div className="flex flex-col gap-2 items-center">
           <a
