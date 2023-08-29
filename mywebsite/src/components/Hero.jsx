@@ -2,8 +2,11 @@ import React from "react";
 
 function Hero() {
   return (
-    <section className="bg-[url('./assets/myimage.jpg')] bg-cover bg-[center_top_88rem] p-3 min-h-[28rem] rounded-md bg-opacity-70">
-      <h3 className="text-4xl font-tienne font-bold text-white">
+    <section
+      id="about"
+      className="bg-[url('./assets/myimage.jpg')] bg-cover bg-center p-3 min-h-[28rem] rounded-md bg-opacity-70"
+    >
+      <h3 className="text-4xl font-tienne font-bold text-white max-sm:text-2xl">
         Welcome to my <span className="font-bold font-bungee">Portfolio</span>
       </h3>
       <p className="mt-3 text-white w-3/5">

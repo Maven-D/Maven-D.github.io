@@ -16,7 +16,7 @@ import { IoLogoGooglePlaystore } from "react-icons/io5";
 
 function Projects() {
   return (
-    <section>
+    <section id="portfolio">
       <h3 className="font-bungee mt-16 text-4xl text-bistre font-bold">
         Portfolio Projects
       </h3>

@@ -3,6 +3,10 @@
   font-family: "Imprima";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar {
   width: 13px;
   height: 10px;

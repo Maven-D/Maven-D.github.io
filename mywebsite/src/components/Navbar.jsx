@@ -40,13 +40,17 @@ function Navbar({ isMobile }) {
           }`}
         >
           <li className="bg-flame p-2 text-white rounded-xl hover:cursor-pointer hover:bg-slate-400">
-            <a>About</a>
+            <a href="#about" translate="yes">
+              About
+            </a>
           </li>
           <li className="bg-flame p-2 text-white rounded-xl hover:cursor-pointer hover:bg-slate-400">
-            <a className="">Portfolio</a>
+            <a href="#portfolio" translate="yes">
+              Portfolio
+            </a>
           </li>
           <li className="bg-flame p-2 text-white rounded-xl hover:cursor-pointer hover:bg-slate-400">
-            <a>Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>

@@ -64,7 +64,7 @@ function Contact() {
   }
   return (
     <>
-      <section>
+      <section id="contact">
         <h2 className="font-bungee text-4xl text-bistre font-bold mt-16">
           Contact Details
         </h2>
