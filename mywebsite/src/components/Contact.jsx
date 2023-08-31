@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import { TiTick } from "react-icons/ti";
 // import { GoogleSpreadsheet } from "google-spreadsheet";
 // import { JWT } from "google-auth-library";
 
@@ -36,10 +37,12 @@ function Contact() {
   // };
 
   const [showModal, setShowModal] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   function submitFeedback(e) {
     e.preventDefault();
     const API_KEY = import.meta.env.VITE_API_KEY;
+    setIsSubmitting((val) => !val);
 
     const feedback = {
       FirstName: document.getElementById("FirstName").value,
@@ -58,7 +61,10 @@ function Contact() {
       },
     })
       .then((res) => {
-        res.json().then(({ result }) => setShowModal(true));
+        res.json().then(({ result }) => {
+          setShowModal(true);
+          setIsSubmitting((val) => !val);
+        });
       })
       .catch((e) => {});
   }
@@ -120,25 +126,34 @@ function Contact() {
               className="pl-3 border-2 rounded-md resize-none"
               required
             />
-
-            <input
-              type="submit"
-              placeholder="Submit"
-              className="rounded-md border-2 bg-flame text-white hover:bg-slate-300 hover:cursor-pointer self-center w-64 h-10"
-            />
+            {!isSubmitting ? (
+              <input
+                type="submit"
+                placeholder="Submit"
+                className="rounded-md border-2 bg-flame text-white hover:bg-slate-300 hover:cursor-pointer self-center w-64 h-10"
+              />
+            ) : (
+              <div className="flex bg-flame w-64 h-10 self-center rounded-md border-2 items-center justify-center gap-2">
+                <div className="rounded-full bg-white w-2 h-2 animate-bounce-1"></div>
+                <div className="rounded-full bg-white w-2 h-2 animate-bounce-2"></div>
+                <div className="rounded-full bg-white w-2 h-2 animate-bounce-3"></div>
+                <div className="rounded-full bg-white w-2 h-2 animate-bounce-4"></div>
+              </div>
+            )}
           </form>
         </div>
       </section>
       {showModal && (
-        <div className="fixed top-0 left-0 h-full w-full z-10 bg-slate-500 opacity-80 flex justify-center items-center">
-          <div className="relative h-1/3 w-1/3 bg-white flex items-center justify-center">
+        <div className="fixed top-0 left-0 h-full w-full z-10 bg-slate-700 opacity-90 flex justify-center items-center">
+          <div className="relative h-1/3 w-1/3 bg-vanilla flex flex-col items-center">
             <AiOutlineClose
               className="absolute top-2 right-2 cursor-pointer"
               size={20}
               color="red"
               onClick={() => setShowModal(false)}
             />
-            <h3 className="text-xl uppercase">
+            <TiTick size={64} className="mt-16 text-green-400" />
+            <h3 className="max-sm:text-[1.05rem] text-xl uppercase text-green-800 text-center">
               Feedback Successfully Sumbitted
             </h3>
           </div>
