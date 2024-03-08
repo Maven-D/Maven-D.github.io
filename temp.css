@@ -2108,7 +2108,7 @@ textarea.w-select {
   bottom: auto;
   width: 24vw;
   height: 32vw;
-  background-image: url("https://uploads-ssl.webflow.com/60805733151b6718a943682f/60928b52e4daea7385c83796_Clou_Bild_Brew_Cheffe_Tiny.jpg");
+  background-image: url("./assets/papa birthday/papa birthday 2.jpg");
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -2116,11 +2116,58 @@ textarea.w-select {
   position: absolute;
   right: 4vw;
   bottom: 0;
+  width: 32vw;
+  height: 32vw;
+  background-image: url("./assets/papa birthday/papa birthday 3.jpg");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.brew_bild_11 {
+  position: absolute;
+  left: 8vw;
+  bottom: -8vw;
+  right: auto;
+  top: auto;
   width: 24vw;
   height: 32vw;
-  background-image: url("https://uploads-ssl.webflow.com/60805733151b6718a943682f/6092898b1e55532c3b27fe06_Clou_Bild_Brew_Ma%CC%88si.png");
+  background-image: url("./assets/papa birthday/papa birthday 4.jpg");
   background-position: 50% 50%;
   background-size: cover;
+}
+.brew_bild_14 {
+  position: absolute;
+  left: 8vw;
+  bottom: -8vw;
+  right: auto;
+  top: auto;
+  width: 24vw;
+  height: 32vw;
+  background-image: url("./assets/papa birthday/IMG-20240308-WA0022.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.brew_bild_21 {
+  position: absolute;
+  right: 8vw;
+  top: -8vw;
+  width: 32vw;
+  height: 32vw;
+  background-image: url("./assets/papa birthday/papa birthday 5.jpg");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.brew_bild_24 {
+  position: absolute;
+  right: 8vw;
+  top: -8vw;
+  width: 32vw;
+  height: 32vw;
+  background-image: url("./assets/papa birthday/IMG-20240308-WA0020.jpg");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .brew_bild_3 {
   width: 60vw;
@@ -2128,9 +2175,57 @@ textarea.w-select {
   min-height: 750px;
   min-width: 1000px;
   background-color: #000;
-  background-image: url("https://uploads-ssl.webflow.com/60805733151b6718a943682f/60995e3222efd79da1531a40_Brewloop_Export_03_comp.gif");
+  background-image: url("./assets/papa birthday/papa birthday initial.jpg");
   background-position: 50% 50%;
   background-size: cover;
+}
+.brew_bild_31 {
+  width: 60vw;
+  height: 40vw;
+  min-height: 750px;
+  min-width: 1000px;
+  background-color: #000;
+  background-image: url("./assets/papa birthday/papa birthday 13.jpg");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--primary);
+}
+.brew_bild_32 {
+  width: 60vw;
+  height: 40vw;
+  min-height: 750px;
+  min-width: 1000px;
+  background-color: #000;
+  background-image: url("./assets/papa birthday/papa birthday 6.jpg");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--primary);
+}
+.brew_bild_33 {
+  width: 60vw;
+  height: 40vw;
+  min-height: 750px;
+  min-width: 1000px;
+  background-color: #000;
+  background-image: url("./assets/papa birthday/papa birthday 7.jpg");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--primary);
+}
+.brew_bild_34 {
+  width: 60vw;
+  height: 40vw;
+  min-height: 750px;
+  min-width: 1000px;
+  background-color: #000;
+  background-image: url("./assets/papa birthday/IMG-20240308-WA0021.jpg");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--primary);
 }
 .heading-text {
   margin-bottom: 40px;
@@ -2315,26 +2410,59 @@ textarea.w-select {
   right: auto;
   width: 30vw;
   height: 40vw;
-  background-image: url("https://uploads-ssl.webflow.com/60805733151b6718a943682f/6093fbec9ce2387ebe052fdc_Slideshow_Kleben_04_Tiny.jpg");
+  background-image: url("./assets/papa birthday/IMG-20240308-WA0009.jpg");
   background-position: 50% 50%;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+.slideshow_11 {
+  position: absolute;
+  left: 4vw;
+  right: auto;
+  width: 30vw;
+  height: 40vw;
+  background-image: url("./assets/papa birthday/IMG-20240308-WA0011.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .slideshow_2 {
   position: absolute;
   width: 30vw;
   height: 40vw;
-  background-image: url("https://uploads-ssl.webflow.com/60805733151b6718a943682f/6093fbec985b86111a5a652b_Slideshow_Kleben_03_Tiny.jpg");
+  background-image: url("./assets/papa birthday/IMG-20240308-WA0007.jpg");
   background-position: 50% 50%;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+.slideshow_21 {
+  position: absolute;
+  width: 30vw;
+  height: 40vw;
+  background-image: url("./assets/papa birthday/IMG-20240308-WA0034.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .slideshow_3 {
   position: absolute;
   right: 4vw;
   width: 30vw;
   height: 40vw;
-  background-image: url("https://uploads-ssl.webflow.com/60805733151b6718a943682f/6093fbec11d7ff29f38cae79_Slideshow_Kleben_02_Tiny.jpg");
+  background-image: url("./assets/papa birthday/IMG-20240308-WA0012.jpg");
   background-position: 50% 50%;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+.slideshow_31 {
+  position: absolute;
+  right: 4vw;
+  width: 30vw;
+  height: 40vw;
+  background-image: url("./assets/papa birthday/IMG-20240308-WA0036.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .section_stapel {
   position: relative;
@@ -2364,7 +2492,7 @@ textarea.w-select {
   position: absolute;
   z-index: 20;
   width: 72vh;
-  background-image: url("https://uploads-ssl.webflow.com/60805733151b6718a943682f/609918fddec17c54dbb99df0_Clou_Bild_Albi_Anja_SW_Tiny.jpg");
+  /* background-image: url("https://uploads-ssl.webflow.com/60805733151b6718a943682f/609918fddec17c54dbb99df0_Clou_Bild_Albi_Anja_SW_Tiny.jpg"); */
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -2372,7 +2500,7 @@ textarea.w-select {
   position: absolute;
   z-index: 40;
   width: 72vh;
-  background-image: url("https://uploads-ssl.webflow.com/60805733151b6718a943682f/609918fde3642d3c8649928c_Clou_Bild_Anja_SW_Tiny.jpg");
+  /* background-image: url("https://uploads-ssl.webflow.com/60805733151b6718a943682f/609918fde3642d3c8649928c_Clou_Bild_Anja_SW_Tiny.jpg"); */
   background-position: 10% 50%;
   background-size: cover;
 }
@@ -2380,7 +2508,7 @@ textarea.w-select {
   position: absolute;
   z-index: 30;
   width: 54vh;
-  background-image: url("https://uploads-ssl.webflow.com/60805733151b6718a943682f/609918fdb053a7ee5fc3ec0f_Clou_Bild_Cyrill_SW_Tiny.jpg");
+  /* background-image: url("https://uploads-ssl.webflow.com/60805733151b6718a943682f/609918fdb053a7ee5fc3ec0f_Clou_Bild_Cyrill_SW_Tiny.jpg"); */
   background-position: 0 0;
   background-size: cover;
 }
